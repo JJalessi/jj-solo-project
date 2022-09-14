@@ -20,6 +20,16 @@ import {BasePage} from './basePage'
         boxA: By = By.css('[id="column-a"]')
         boxB: By = By.css('[id="column-b"]') 
 
+        //Inputs Page 
+        inputLink: By = By.xpath('//a[@href="/inputs"]')
+        numberInput: By = By.xpath('//input[@type="number"]')
+
+        //Hovers Page
+        hoverLink: By = By.xpath('//a[@href="/hovers"]')
+        user1: By = By.xpath('//img[@src="/img/avatar-blank.jpg"][0]')
+        nameBox: By = By.xpath('//h5[text()="name: user1"]')
+        viewProfile: By = By.xpath('//a[@href="/users/1"]')
+
         //Context Menu Page 
         menuPage: By = By.xpath('//a[@href="/context_menu"]')
         contextBox: By = By.xpath('//div[@id="hot-spot"]')
@@ -29,11 +39,16 @@ import {BasePage} from './basePage'
         filePage: By = By.xpath('//a[@href="/upload"]')
         chooseFile: By = By.xpath('//input[@id="file-upload"]')  
         upload: By = By.css('[id="file-submit"]') 
-        successBox: By = By.css('[class="dz-success-mark dz-clickable"]') 
+        successBox: By = By.css('[class="dz-success-mark dz-clickable"]')  
 
-
+        //Geolocation Page
+        geoLink: By = By.xpath('//a[@href="/geolocation"]')
+        whereBtn: By = By.xpath('//button[@onclick="getLocation()"]')
+        googleLink: By = By.xpath('//a[@href="http://maps.google.com/?q=40.8389688,-115.7674698"]')
+        
         constructor() {
             super({url: 'https://the-internet.herokuapp.com/' })
         }
 
-    }
+
+}
